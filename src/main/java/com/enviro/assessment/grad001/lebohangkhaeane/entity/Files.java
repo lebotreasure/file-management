@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
+/**
+ * @author Lebohang
+ */
 @Entity
 @Data
 @NoArgsConstructor
@@ -21,6 +24,12 @@ public class Files {
     @Lob
     private byte[] data;
 
+    /**
+     *
+     * @param fileName
+     * @param fileType
+     * @param data
+     */
     public Files(String fileName, String fileType, byte[] data) {
         this.fileName = fileName;
         this.fileType = fileType;
